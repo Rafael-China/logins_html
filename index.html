@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title> Crud Simples Utilizando JSON </title>
+    <script src="crud.js"></script>
+
+</head>
+
+<body>
+
+    <h2> Crud Simples Utilizando JSON </h2>
+
+    <table cellpadding="30">
+
+        <tr>
+            <td>
+
+                <h2> Cadastrar Dados </h2>
+
+                <form name="cad">
+
+                    <label> Nome: </label>
+                    <input type="text" name="nome" id="nome" required>
+                    <br><br>
+                    <label> Telefone: </label>
+                    <input type="tel" name="telefone" id="telefone" required>
+                    <br><br>
+                    <label> E-mail </label>
+                    <input type="email" name="mail" id="mail" required>
+                    <br><br>
+                    <input type="submit" name="enviar" id="enviar" value="ENVIAR" onclick="add()">
+
+                </form>
+
+            </td>
+
+            <td style="border-left: 4px solid #000">
+
+                <h2> Atualizar Dados</h2>
+
+                <label> Informe o ID </label>
+                <input type="number" name="id_alt" id="id_alt" required>
+                <button onclick="check()"> Buscar </button>
+                <br><br>
+
+                <form name="cad" name="alt_cad">
+
+                    <label> Nome: </label>
+                    <input type="text" name="nome_alt" id="nome_alt" required>
+                    <br><br>
+                    <label> Telefone: </label>
+                    <input type="tel" name="telefone_alt" id="telefone_alt" required>
+                    <br><br>
+                    <label> E-mail </label>
+                    <input type="email" name="mail_alt" id="mail_alt" required>
+                    <br><br>
+                    <input type="submit" name="alterar" id="alterar" value="ALTERAR" onclick="Alterar()">
+
+                </form>
+
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+    <hr size="4" color="#000">
+    <br>
+    <button onclick="listar()"> LISTAR USUARIOS CADASTRADOS </button>
+    <br><br>
+    <div id="show"></div>
+
+</body>
+
+</html>
